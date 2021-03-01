@@ -1,6 +1,6 @@
 # pweb_2020.2_JoabAnderson
-<p>
-Matéria: Programação WEB
-Aluno: Joab Anderson
-Professor: Xico Arrruda (https://github.com/pwebufersa)
-</p>
+
+<p>Matéria: Programação WEB</p>
+<p>Aluno: Joab Anderson</p>
+<p>Professor: Xico Arrruda (https://github.com/pwebufersa)</p>
+
