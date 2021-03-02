@@ -4,5 +4,5 @@
 
 + Matéria: Programação WEB
 + Aluno: Joab Anderson
-+ Professor: Xico Arrruda (https://github.com/pwebufersa)
++ Professor: [Xico Arrruda] (https://github.com/pwebufersa "Programação WEB - UFERSA Angicos")
 
