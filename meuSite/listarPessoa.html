@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta codigoSecreto="1432968328">
     <title>Listar Pessoas</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,20 +11,49 @@
     <nav class="menu">
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="#">Noticías</a>
-                <ul>
-                    <li><a href="https://g1.globo.com/" target="_blank">G1</a></li>
-                    <li><a href="https://noticias.uol.com.br/" target="_blank">UOL</a></li>
-                </ul>
-            </li>        
+            <li><a href="noticias.html">Noticías</a></li>        
             <li><a href="adicionarPessoa.html">Adcionar pessoa</a></li>
             <li><a href="listarPessoa.html">Listar pessoas</a></li>
             <li><a href="sobre.html">Sobre o site</a></li>
-            <li><a href="contato.html">Contatos</a></li>
+            <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
-
-    <p>Vai ter alguma coisa aqui</p>
+    <h1>Lista de pessoas cadastradas</h1>
+    <table>
+        <tr>
+          <th>Nome completo&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>Data de nascimento&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>e-Mail&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>Sexo&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>Editar&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>Remover</th>
+        </tr>
+        <tr>
+          <td>Julieta</td>
+          <td>05/11/1998</td>
+          <td><a href="mailto:julieta@dominio.com">julieta@dominio.com</a></td>
+          <td>Masculino</td>
+          <td><a href="editarPessoa.html">Editar</a></td>
+          <td><a href="#">Remover</a></td>
+        </tr>
+        <tr>
+          <td>Joao</td>
+          <td>28/07/2004</td>
+          <td><a href="mailto:joao@outro.com">joao@outro.com</a></td>
+          <td>Feminino</td>
+          <td><a href="editarPessoa.html">Editar</a></td>
+          <td><a href="#">Remover</a></td>
+        </tr>
+        <tr>
+          <td>Romeu</td>
+          <td>15/09/1984</td>
+          <td><a href="mailto:romeu@dominio.com">romeu@dominio.com</a></td>
+          <td>Não informar</td>
+          <td><a href="editarPessoa.html">Editar</a></td>
+          <td><a href="#">Remover</a></td>
+        </tr>
+           
+      </table>
 
 </body>
 </html>
