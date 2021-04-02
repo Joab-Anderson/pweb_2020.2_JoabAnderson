@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta codigoSecreto="1432968328">
+    <title>PWeb JoabAnderson - Editar Pessoa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="noticias.html">Notícias</a></li>        
+            <li><a href="adicionarPessoa.html">Adicionar pessoa</a></li>
+            <li><a href="listarPessoa.html">Listar pessoas</a></li>
+            <li><a href="sobre.html">Sobre o site</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <h1>Formulário para edição de pessoas:</h1>
+    <form action="listarPessoa.html" method="get">
+        <p>Nome completo *: <input type="text" placeholder="Seu nome completo"></p>
+        <p>Data de nascimento *: <input type="text" placeholder="dd/mm/aaaa"></p>
+        <p>e-Mail *: <input type="text" placeholder="nome@dominio.com"></p>  
+        <p>Sexo *:</p>
+        </p>
+        <input type="radio" name="sexo" value="Masculino">
+        <label for="Masculino">Masculino</label><br>
+        <input type="radio" name="sexo" value="Feminino">
+        <label for="Feminino">Feminino</label><br>
+        <input type="radio" name="sexo" value="Não informar">
+        <label for="Não informar">Não informar</label>
+        <br><br>
+        
+        <input class="button" type="reset" value="Limpar">
+        <input class="button" type="submit" value="Cadastrar" formaction="adicionadaComSucesso.html">
+        
+    </form>
+
+    <p>* Campo Obrigatório</p>
+        
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta codigoSecreto="1432968328">
+    <title>PWeb JoabAnderson - Listar Pessoas</title>
+    <link th:href="@{css/style.css}" rel="stylesheet">
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="noticias.html">Notícias</a></li>        
+            <li><a href="adicionarPessoa.html">Adicionar pessoa</a></li>
+            <li><a href="listarPessoa.html">Listar pessoas</a></li>
+            <li><a href="sobre.html">Sobre o site</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <h1>Lista de pessoas cadastradas</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome completo</th>
+          <th>Data de nascimento&</th>
+          <th>e-Mail</th>
+          <th>Sexo</th>
+          <th>Editar</th>
+          <th>Remover</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="pessoa: ${pessoas}">
+          <td th:text="${pessoa.id}"></td>
+          <td th:text="${pessoa.nome}"></td>
+          <td>
+            <a th:href="'mailto:'+${pessoa.email}"th:text="${pessoa.email}"></a>
+          </td>
+            <td th:text="${#temporals.format(pessoa.dataNascimento, 'dd/MM/yyyy')}"></td>
+            <td th:text="${pessoa.genero}"></td>
+            <td>
+              <a th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a>
+            </td>
+            <td>
+              <a th:href="@{/remover/{id}(id=${pessoa.id})}">Remover</a>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+</body>
+</html>
