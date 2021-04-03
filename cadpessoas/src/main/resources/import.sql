@@ -1,6 +1,6 @@
 ﻿/*Primeira linha em branco - Spring não tava adicionado os valores*/
-INSERT INTO pessoas (nome, email, data_nascimento, genero) VALUES ('Maria da Penha Maia Fernandes', 'mariaDaPenha@gov.br', parseDateTime('01/02/1945','dd/MM/yyyy'), 'Feminino');
-INSERT INTO pessoas (nome, email, data_nascimento, genero) VALUES ('Pedro Álvares Cabral', 'pedrim@navio.br', parseDateTime('01/02/1467','dd/MM/yyyy'), 'Não Informado');
-INSERT INTO pessoas (nome, email, data_nascimento, genero) VALUES ('Tarsila do Amaral', 'tarsila@abaporu.br', parseDateTime('01/09/1886','dd/MM/yyyy'), 'Não Informado');
-INSERT INTO pessoas (nome, email, data_nascimento, genero) VALUES ('Oscar Niemeyer', 'obras@niemeyer.br', parseDateTime('15/12/1907','dd/MM/yyyy'), 'Não Informado');
-INSERT INTO pessoas (nome, email, data_nascimento, genero) VALUES ('Joaquim Maria Machado de Assis', 'machado@assis.com', parseDateTime('21/06/1839','dd/MM/yyyy'), 'Masculino');
+INSERT INTO pessoas (nome, email, data_nascimento, genero) VALUES ('Maria Do Bairro', 'mariaDoBairro@bairro.com', parseDateTime('08/06/1977','dd/MM/yyyy'), 'Feminino');
+INSERT INTO pessoas (nome, email, data_nascimento, genero) VALUES ('Cristiano Ronaldo', 'cris7@yahhu.pt', parseDateTime('01/02/1987','dd/MM/yyyy'), 'Masculino');
+INSERT INTO pessoas (nome, email, data_nascimento, genero) VALUES ('Tarcisio Maia', 'tarsil@mil.br', parseDateTime('26/08/1916','dd/MM/yyyy'), 'Homem');
+INSERT INTO pessoas (nome, email, data_nascimento, genero) VALUES ('Lico Preto (vei do cuentro)', 'lico@ants.br', parseDateTime('05/11/1977','dd/MM/yyyy'), 'Não Informado');
+INSERT INTO pessoas (nome, email, data_nascimento, genero) VALUES ('Maria Joaquina', 'joaquina@rasis.com', parseDateTime('11/07/2000','dd/MM/yyyy'), 'Mulher');

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CadpessoasJoabApplication<cadpessoas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "br.com.joab.cadpessoas.CadpessoasJoabApplication",
+            "projectName": "cadpessoas",
+            "args": ""
+        }
+    ]
+}

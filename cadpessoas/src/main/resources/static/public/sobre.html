@@ -2,26 +2,27 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta codigoSecreto="1432968328">
     <title>PWeb JoabAnderson - Sobre o Site</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link th:href="@{css/style.css}" rel="stylesheet">
 </head>
 <body>
     <nav class="menu">
         <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="noticias.html">Notícias</a></li>        
-            <li><a href="adicionarPessoa.html">Adicionar pessoa</a></li>
-            <li><a href="listarPessoa.html">Listar pessoas</a></li>
-            <li><a href="sobre.html">Sobre o site</a></li>
-            <li><a href="contato.html">Contato</a></li>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="/public/noticias.html">Notícias</a></li>        
+          <li><a href="adicionarPessoa.html">Adicionar pessoa</a></li>
+          <li><a href="listarPessoa.html">Listar pessoas</a></li>
+          <li><a href="/public/sobre.html">Sobre o site</a></li>
+          <li><a href="/public/contato.html">Contato</a></li>
         </ul>
     </nav>
 
     <h1>Sobre o site</h1>
 
-    <img src="img/brasão-Ufersa.png" alt="brasão-Ufersa" align="left" width="70">
+    <img src="/img/brasão-Ufersa.png" alt="brasão-Ufersa" align="left" width="70">
 
     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Site criado para a disciplina de Programação Web - (UFERSA)</p>
     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Professor: Xico Arruda</p>
