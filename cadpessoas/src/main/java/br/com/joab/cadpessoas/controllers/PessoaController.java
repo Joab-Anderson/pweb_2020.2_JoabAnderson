@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,22 +20,29 @@ public class PessoaController {
     @Autowired
     PessoaRepository pessoaRepo;
 
-    @GetMapping("/index.html")
+    PessoaController(PessoaRepository pessoaRepo){
+        this.pessoaRepo = pessoaRepo;
+    }
+
+    @GetMapping
     public String inicio(){
         return "index.html";
     }
 
-    /*@GetMapping("/static/public/noticias.html")
-    public String noticias(){
-        return "/static/public/noticias.html";
-    }*/
+    @GetMapping("/adicionarPessoa")
+    public ModelAndView formAdcionarPessoa(){
+        ModelAndView modelAndView = new ModelAndView("adicionarPessoa");
+        modelAndView.addObject(new Pessoa());
+        return modelAndView;
+    }
 
-    /*@GetMapping("/adicionarPessoa.html")
-    public String adcionarPessoa(){
-        return "/adicionarPessoa.html";
-    }*/
+    @PostMapping("/adicionarPessoa")
+    public String adicionarPessoa(Pessoa pessoa){
+        this.pessoaRepo.save(pessoa);
+        return "redirect:/listarPessoa";
+    }
 
-    @GetMapping("/listarPessoa.html")
+    @GetMapping("/listarPessoa")
     public ModelAndView listarPessoas(){
         List<Pessoa> lista = pessoaRepo.findAll();
         ModelAndView mav = new ModelAndView("listarPessoa");
@@ -42,18 +50,27 @@ public class PessoaController {
         return mav;
     }
 
-    /*@PostMapping("/sobre.html")
-    public String sobreSite(){
-        return "sobre.html";
+    @GetMapping("/editar/{id}")
+    public ModelAndView formEditarPessoa (@PathVariable("id") long id){
+        Pessoa pessoa = pessoaRepo.findById(id)
+            .orElseThrow(() -> new IllegalArgumentException("ID Invalido: " + id));
+        ModelAndView modelAndView = new ModelAndView("editarPessoa");
+        modelAndView.addObject(pessoa);
+        return modelAndView;
     }
 
-    @GetMapping("/public/contato.html")
-    public String contato(){
-        return "/public/contato.html";
+
+    @PostMapping("/editar/{id}")
+    public ModelAndView editarPessoa(@PathVariable("id") long id, Pessoa pessoa){
+        this.pessoaRepo.save(pessoa);
+        return new ModelAndView("redirect:/listarPessoa");
     }
 
-    @GetMapping("/editarPessoa.html")
-    public String editarPessoa(){
-        return "/editarPessoa.html";
-    }*/
+    @GetMapping("/remover/{id}")
+    public ModelAndView removerPessoa(@PathVariable("id") long id){
+        Pessoa aRemover = pessoaRepo.findById(id)
+        .orElseThrow(() -> new IllegalArgumentException("ID Invalido: " + id));
+        pessoaRepo.delete(aRemover);
+        return new ModelAndView("redirect:/listarPessoa");
+    }
 }
