@@ -45,9 +45,9 @@ public class PessoaController {
     @GetMapping("/listarPessoa")
     public ModelAndView listarPessoas(){
         List<Pessoa> lista = pessoaRepo.findAll();
-        ModelAndView mav = new ModelAndView("listarPessoa");
-        mav.addObject("pessoas", lista);
-        return mav;
+        ModelAndView modelAndView = new ModelAndView("listarPessoa");
+        modelAndView.addObject("pessoas", lista);
+        return modelAndView;
     }
 
     @GetMapping("/editar/{id}")
