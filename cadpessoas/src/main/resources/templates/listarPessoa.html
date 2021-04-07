@@ -22,14 +22,15 @@
     </ul>
 </nav>
 
-    <h1>Lista de pessoas cadastradas</h1>
-    <table>
+    <h1 class="lh">Lista de pessoas cadastradas</h1>
+    <table class="tbl">
       <thead>
         <tr>
           <th>Nome completo</th>
           <th>Data de nascimento&</th>
           <th>e-Mail</th>
-          <th>Sexo</th>
+          <th>Data de Nascimento</th>
+          <th>Genero</th>
           <th>Editar</th>
           <th>Remover</th>
         </tr>
@@ -42,7 +43,7 @@
             <a th:href="'mailto:'+${pessoa.email}"th:text="${pessoa.email}"></a>
           </td>
             <td th:text="${#temporals.format(pessoa.dataNascimento,'dd/MM/yyyy')}"></td>
-            <td th:text="${pessoa.sexo}"></td>
+            <td th:text="${pessoa.genero}"></td>
             <td>
               <a th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a>
             </td>

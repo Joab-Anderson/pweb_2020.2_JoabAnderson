@@ -21,27 +21,25 @@
         </ul>
     </nav>
 
-    <h1>Formulário para cadastro de pessoas:</h1>
-    <form method="POST" th:object="${pessoa}" th:action="@{/adicionarPessoa}">
-        <p>Nome completo *: <input type="text" placeholder="Seu nome completo" th:field="*{nome}" required /></p>
-        <p>Data de nascimento *: <input type="text" placeholder="dd/mm/aaaa" th:field="*{dataNascimento}" required /></p>
-        <p>e-Mail *: <input type="text" placeholder="nome@dominio.com" th:field="*{email}" required /></p>  
-        <p>Sexo *:</p>
-        </p>
-        <input type="radio" name="sexo" value="Masculino" th:field="*{sexo}" required />
-        <label for="Masculino">Masculino</label><br>
-        <input type="radio" name="sexo" value="Feminino" th:field="*{sexo}" required />
-        <label for="Feminino">Feminino</label><br>
-        <input type="radio" name="sexo" value="Não informar" th:field="*{sexo}" required />
-        <label for="Não informar">Não informar</label>
-        <br><br>
-        
-        <input class="button" type="reset" value="Limpar">
-        <input class="button" type="submit" value="Cadastrar" formaction="Adicionar">
-        
-    </form>
-
-    <p>* Campo Obrigatório</p>
-        
+    <div class="h">
+        <h1>Formulário para cadastro de pessoas:</h1>
+        <form method="POST" th:object="${pessoa}" th:action="@{/adicionarPessoa}">
+            <p>Nome completo *: <input type="text" placeholder="Seu nome completo" th:field="*{nome}" required /></p>
+            <p>Data de nascimento *: <input type="text" placeholder="dd/mm/aaaa" th:field="*{dataNascimento}" required /></p>
+            <p>e-Mail *: <input type="text" placeholder="nome@dominio.com" th:field="*{email}" required /></p>  
+            <p>Genero *:</p>
+            <input type="radio" name="genero" value="Masculino" th:field="*{genero}" required />
+            <label for="Masculino">Masculino</label><br>
+            <input type="radio" name="genero" value="Feminino" th:field="*{genero}" required />
+            <label for="Feminino">Feminino</label><br>
+            <input type="radio" name="genero" value="Não informar" th:field="*{genero}" required />
+            <label for="Não informar">Não informar</label>
+            <br><br>
+            <input class="button" type="reset" value="Limpar">
+            <input class="button" type="submit" value="Cadastrar" formaction="Adicionar">   
+        </form>
+        <p>* Campo Obrigatório</p>
+    </div>
+                
 </body>
 </html>
